@@ -6,6 +6,12 @@ import { defineConfig } from 'vite'
 export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
 
+	server: {
+		fs: {
+			allow: ['./static/opencv.js', './static/jscanify.min.js']
+		}
+	},
+
 	test: {
 		workspace: [
 			{
